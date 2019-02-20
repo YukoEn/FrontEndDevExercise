@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Using jquery</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <style>
+    html {
+      font-size: 0.8rem;
+      padding: 10px;
+    }
+
+    #outputRes:not(:placeholder-shown) {
+      background-color: lightcyan;
+      color: #17a2b8;
+    }   
+
+    #outputRes:placeholder-shown {
+      background-color: lightcyan;
+      color: #17a2b8;
+    }
+
+    .form-btn {
+      margin-left: 30px;
+    } 
+  </style>
+</head>
+
+<body>
+  <form>
+    <div class="form-group col-md-3">
+      <input type="text" class="form-control bg-gradient-info" id="outputRes" placeholder="Result comes..." />
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4 px-4">
+        <input type="text" class="form-control" id="inputFirst" />
+      </div>
+      <div class="form-group col-md-4 px-4">
+        <input type="text" class="form-control" id="inputSecond" />
+      </div>
+    </div>
+    <div class="form-btn">
+      <button type="submit" class="btn btn-secondary" id="btn_plus">+</button>
+      <button type="submit" class="btn btn-secondary" id="btn_minus">-</button>
+    </div>
+  </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {
+
+      $("#btn_plus").click(function (e) {
+        e.preventDefault();
+        var valFirst = parseFloat($("#inputFirst").val());
+        var valSecond = parseFloat($("#inputSecond").val());
+        $("#outputRes").val("Result = " + (valFirst + valSecond));
+      });
+
+      $("#btn_minus").click(function (e) {
+        e.preventDefault();
+        var valFirst = parseFloat($("#inputFirst").val());
+        var valSecond = parseFloat($("#inputSecond").val());
+        $("#outputRes").val("Result = " + (valFirst - valSecond));
+      });
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+body {
+    background-image: url(image/circles-dark.png)
+}
+
+h1, h3 {
+    color: red;
+    text-transform: uppercase;
+}
+
+a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+section, article > p {
+    font-family: 'Roboto';
+    font-size: 12pt;
+    margin-left: 5%;
+}
+
+figure {
+    margin-left: 5%;
+    padding-left: 50px;
+}
+
+figcaption{
+    color: darkblue;
+}

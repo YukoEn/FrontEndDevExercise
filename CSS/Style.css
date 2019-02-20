@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.empty{
+    clear: both;
+}
+
+
+.item1 {
+    float: left;
+    padding: 15px;
+}
+
+.item2 {
+    float: left;
+    padding: 15px;
+}
+
+.item3 {
+    float: left;
+    padding: 15px;
+}
+
+.item4 {
+    float: left;
+    padding: 15px;
+}
+
+.item5 {
+    float: left;
+    padding: 15px;
+}

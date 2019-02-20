@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>HTML form</title>
+    <style>
+        input {
+      width: 97%;
+      padding: 4px;
+      margin: 10px;
+    }
+    
+    select {
+      width: 95%;
+      padding: 4px;
+      margin: 10px 10px;
+    }
+  </style>
+</head>
+
+<body>
+    <form action="/action_page.php" method="post"> First Name
+        <br>
+        <input type="text" name="firstname">
+        <br> Last Name
+        <br>
+        <input type="text" name="lastname">
+        <br> Date of Birth
+        <br>
+        <input type="date" name="bday">
+        <br> Gender
+        <br>
+        <select name="genderlist">
+            <option value="female">female</option>
+            <option value="male">male</option>
+        </select>
+        <br> E-mail
+        <br>
+        <input type="email" name="email">
+        <br> Homepage
+        <br>
+        <input type="url" name="homepage">
+        <br> Favorite Color
+        <br>
+        <input type="color" name="favcolor" value="#00ff00">
+        <br>
+        <button type="submit" value="Submit">Save</button>
+    </form>
+</body>
+
+</html>

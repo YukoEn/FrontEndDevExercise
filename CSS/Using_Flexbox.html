@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Flexbox</title>
+    <style>
+        .box {
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 5px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .box {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .box div {
+            width: 150px;
+            height: 80px;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid lightgray;
+            text-align: left;
+            flex: 0 1 auto;
+        }
+
+        .box .item3 {
+            width: 200px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Using Flexbox</h1>
+    <div class="box">
+
+        <div class="item1">
+            <p>This is the first section</p>
+        </div>
+        <div class="item2">
+            <p>Here is some more text</p>
+        </div>
+        <div class="item3">
+            <p>Text continues in this section</p>
+        </div>
+        <div class="item4">
+            <p>Is there more coming?</p>
+        </div>
+        <div class="item5">
+            <p>This is the final section</p>
+        </div>
+    </div>
+</body>
+
+</html>

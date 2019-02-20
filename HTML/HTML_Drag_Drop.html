@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>HTML Drag and Drop</title>
+    <style>
+        #div1 {
+            width: 300px;
+            height: 200px;
+            padding-left: 10px;
+            padding-top: 10px;
+            border: 1px solid #aaaaaa;
+        }
+
+        #drag1,
+        .dragitem {
+            width: 250px;
+            padding-top: 15px;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <p>Drag the products you want to buy shopping bag</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><b>Shopping basket</b></div>
+
+    <div id="drag1"><b>Products:</b>
+        <div class=dragitem id="item1" draggable="true" ondragstart="drag(event)">Iphone X</div>
+
+        <div class=dragitem id="item2" draggable="true" ondragstart="drag(event)">Motorola Moto X</div>
+
+        <div class=dragitem id="item3" draggable="true" ondragstart="drag(event)">Samsung Galaxy J5</div>
+
+        <div class=dragitem id="item4" draggable="true" ondragstart="drag(event)">Nokia 8</div>
+    </div>
+
+</body>
+
+</html>
